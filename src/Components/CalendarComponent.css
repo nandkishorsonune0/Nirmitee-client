@@ -1,0 +1,335 @@
+.calendar-container {
+    height: 100%;
+    padding: 25px;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin: 20px;
+  }
+  
+  .custom-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: linear-gradient(to right, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  }
+  
+  .toolbar-left,
+  .toolbar-right {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .toolbar-center h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #2c3e50;
+  }
+  
+  .custom-toolbar button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background: #f8f9fa;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-toolbar button:hover {
+    background: #e9ecef;
+  }
+  
+  .custom-toolbar button.active {
+    background: #3498db;
+    color: white;
+  }
+  
+  .custom-event {
+    padding: 2px 5px;
+  }
+  
+  .event-title {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .event-time {
+    font-size: 0.8em;
+    opacity: 0.8;
+  }
+  
+  /* Calendar specific overrides */
+  .rbc-calendar {
+    font-family: 'Arial', sans-serif;
+    min-height: 600px;
+  }
+  
+  .rbc-event {
+    background: linear-gradient(45deg, #4f46e5 0%, #6366f1 100%) !important;
+    border: none !important;
+    padding: 5px 8px !important;
+    border-radius: 6px !important;
+    box-shadow: 0 2px 4px rgba(99, 102, 241, 0.2);
+    transition: all 0.3s ease !important;
+  }
+  
+  .rbc-event:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(99, 102, 241, 0.3);
+    background: linear-gradient(45deg, #4338ca 0%, #4f46e5 100%) !important;
+  }
+  
+  .rbc-event-content {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .rbc-today {
+    background-color: #faf5ff !important;
+  }
+  
+  .rbc-month-view {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .rbc-month-row {
+    border-color: #e2e8f0;
+  }
+  
+  .rbc-day-bg {
+    transition: background-color 0.2s ease;
+  }
+  
+  .rbc-day-bg:hover {
+    background-color: #f8fafc;
+  }
+  
+  .rbc-off-range-bg {
+    background-color: #f8fafc !important;
+    opacity: 0.8;
+  }
+  
+  .rbc-slot-selection {
+    background-color: rgba(99, 102, 241, 0.2) !important;
+  }
+  
+  .rbc-time-view {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .rbc-time-header {
+    background: linear-gradient(to bottom, #f8fafc 0%, #f1f5f9 100%);
+  }
+  
+  .rbc-time-content {
+    border-top: 1px solid #e2e8f0;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .custom-toolbar {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .toolbar-left,
+    .toolbar-right {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  .calendar-wrapper {
+    height: 100%;
+    padding: 20px;
+  }
+  
+  /* Drag and Drop styles */
+  .rbc-event {
+    background-color: #3498db !important;
+    border: none !important;
+    padding: 5px !important;
+    cursor: move !important;
+    transition: background-color 0.3s ease;
+  }
+  
+  .rbc-event:hover {
+    background-color: #2980b9 !important;
+  }
+  
+  .rbc-event.rbc-selected {
+    background-color: #2980b9 !important;
+  }
+  
+  .rbc-event-content {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Calendar styles */
+  .rbc-calendar {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rbc-header {
+    padding: 12px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: #5a6474;
+    background: linear-gradient(to bottom, #f8fafc 0%, #f1f5f9 100%);
+    border: none !important;
+    border-bottom: 2px solid #e2e8f0 !important;
+  }
+  
+  .rbc-today {
+    background-color: #e8f4fd !important;
+  }
+  
+  /* Drag preview styles */
+  .rbc-addons-dnd-drag-preview {
+    opacity: 0.7;
+    background-color: #3498db;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+  }
+  
+  .rbc-addons-dnd-dragged-event {
+    opacity: 0.3;
+  }
+  
+  .rbc-event {
+    cursor: move !important;
+    transition: opacity 0.3s;
+  }
+  
+  .rbc-addons-dnd-dragging {
+    opacity: 0.7 !important;
+  }
+  
+  .rbc-addons-dnd-over {
+    background-color: rgba(52, 152, 219, 0.3) !important;
+  }
+  
+  .rbc-event {
+    cursor: move !important;
+    background-color: #3498db !important;
+    border: none !important;
+  }
+  
+  .rbc-addons-dnd .rbc-addons-dnd-resize-ns-icon {
+    display: none;
+  }
+  
+  .rbc-addons-dnd .rbc-event-content {
+    pointer-events: none;
+  }
+  
+  .rbc-addons-dnd-dragging {
+    opacity: 0.65;
+  }
+  
+  .rbc-addons-dnd-drag-preview {
+    opacity: 0.85;
+    pointer-events: none;
+  }
+  
+  .rbc-event.rbc-selected {
+    background-color: #2980b9 !important;
+  }
+  
+  /* Toolbar Styles */
+  .toolbar-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #4f46e5 0%, #6366f1 100%);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .toolbar-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(99, 102, 241, 0.2);
+  }
+  
+  .toolbar-btn.active {
+    background: linear-gradient(45deg, #4338ca 0%, #4f46e5 100%);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .calendar-container {
+      padding: 15px;
+      margin: 10px;
+    }
+  
+    .custom-toolbar {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .rbc-toolbar {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+    }
+  
+    .rbc-toolbar button {
+      padding: 8px;
+    }
+  
+    .rbc-header {
+      padding: 8px !important;
+      font-size: 0.75rem;
+    }
+  
+    .rbc-event-content {
+      font-size: 0.75rem;
+    }
+  }
+  
+  /* Drag and Drop Styles */
+  .rbc-addons-dnd-dragging {
+    opacity: 0.7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rbc-addons-dnd-over {
+    background-color: rgba(99, 102, 241, 0.1);
+  }
+  
+  /* Animation for Events */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .rbc-event {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
