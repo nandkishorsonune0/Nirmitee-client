@@ -11,24 +11,24 @@ const DnDCalendar = withDragAndDrop(Calendar);
 
 const CalendarComponent = ({ events, onEventDrop, onSelectEvent }) => {
   const moveEvent = ({ event, start, end }) => {
-    console.log('Original event:', event); // Debug log
+    console.log('Original event:', event); 
     
     const updatedEvent = {
       ...event,
-      id: event._id || event.id, // Handle both MongoDB _id and regular id
+      id: event._id || event.id, 
       title: event.title,
       start: new Date(start),
       end: new Date(end)
     };
     
-    console.log('Updated event:', updatedEvent); // Debug log
+    console.log('Updated event:', updatedEvent); 
     onEventDrop(updatedEvent);
   };
 
-  // Ensure events have proper id field
+ 
   const formattedEvents = events.map(event => ({
     ...event,
-    id: event._id || event.id // Handle both MongoDB _id and regular id
+    id: event._id || event.id 
   }));
 
   return (

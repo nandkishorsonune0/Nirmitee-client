@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5000/events';
+const BASE_URL = 'https://nirmitee-server.onrender.com/events';
 
 export const fetchEvents = async () => {
   try {

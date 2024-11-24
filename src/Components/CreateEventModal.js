@@ -14,7 +14,7 @@ const CreateEventModal = ({
     <div className="modal-overlay">
       <div className="modal-content">
         <div className="modal-header">
-          <h3>Create New Appointment</h3>
+          <h3>Book an Appointment</h3>
           <button className="close-button" onClick={closeModal}>×</button>
         </div>
         <div className="modal-body">
@@ -26,11 +26,11 @@ const CreateEventModal = ({
               value={newEvent.title}
               onChange={handleInputChange}
               className="form-control"
-              placeholder="Enter appointment title"
+              placeholder="Appointment Title"
             />
           </div>
           <div className="form-group">
-            <label>Start Date & Time</label>
+            <label>Select Date & Time</label>
             <input
               type="datetime-local"
               name="start"
