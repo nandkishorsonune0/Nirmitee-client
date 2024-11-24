@@ -159,34 +159,51 @@
     font-size: 1.4rem;
   }
 }
-/* Calendar Input Styling */
+ Calendar Input Styling */
 .react-datepicker-wrapper {
   width: 100%;
 }
-
 .react-datepicker__input-container input {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  background: rgba(255, 255, 255, 0.7);
-  transition: all 0.3s ease;
+  padding: 10px;
+  font-size: 14px;
 }
 
-.react-datepicker__input-container input:focus {
+.react-datepicker__header {
+  background-color: #f0f0f0;
+}
+
+.react-datepicker__day--selected {
+  background-color: #4caf50;
+  color: white;
+}
+
+.datetime-picker {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  color: #333;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.datetime-picker:hover {
+  border-color: #999;
+}
+
+.datetime-picker:focus {
   outline: none;
-  border-color: #2563eb;
-  box-shadow: 0 0 5px rgba(59, 130, 246, 0.4);
-  background: rgba(255, 255, 255, 1);
+  border-color: #0066cc;
+  box-shadow: 0 0 0 2px rgba(0,102,204,0.2);
 }
 
-/* Save Button Disabled State */
-.btn-save:disabled {
-  background: #ccc;
-  cursor: not-allowed;
-}
-
-.btn-save:not(:disabled):hover {
-  background: linear-gradient(45deg, #2563eb, #1d4ed8);
+/* For better mobile support */
+@media (max-width: 768px) {
+  .datetime-picker {
+    font-size: 16px; /* Prevents zoom on mobile */
+    padding: 10px;
+  }
 }

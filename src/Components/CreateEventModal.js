@@ -36,7 +36,8 @@ const CreateEventModal = ({
               name="start"
               value={newEvent.start}
               onChange={handleInputChange}
-              className="form-control"
+              className="form-control datetime-picker"
+              min={new Date().toISOString().slice(0, 16)}
             />
           </div>
           <div className="form-group">
@@ -46,7 +47,8 @@ const CreateEventModal = ({
               name="end"
               value={newEvent.end}
               onChange={handleInputChange}
-              className="form-control"
+              className="form-control datetime-picker"
+              min={newEvent.start || new Date().toISOString().slice(0, 16)}
             />
           </div>
         </div>
